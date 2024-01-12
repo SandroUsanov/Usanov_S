@@ -1,0 +1,905 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* jost-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/jost-v15-cyrillic_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/jost-v15-cyrillic_latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/jost-v15-cyrillic_latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background: #979797;
+  width: 1920px;
+  height: 4684px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 60;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #141024;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container_full {
+  margin: 0 40px;
+}
+
+.header {
+  background-color: #141024;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.header_title:first-child {
+  margin: 100;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 48px;
+  word-wrap: break-word;
+  color: white;
+}
+.title {
+  margin-left: 100px;
+}
+
+.header_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header_item {
+  margin-right: 40px;
+}
+
+.header_item:last-child {
+  margin-right: 100;
+}
+
+.header_link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+  text-decoration: none;
+}
+
+.header_link_last {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 32px;
+  color: white;
+  text-decoration: none;
+}
+.header_link:hover,
+.header_link:focus,
+.header_link:active {
+  opacity: 0.75;
+}
+
+/* Header styles end */
+
+/* Intro styles start */
+
+.main {
+  background-color: #141024;
+}
+
+.intro_wrapper {
+  height: 1080px;
+  position: relative;
+  margin-left: 380px;
+}
+
+.call_to_action {
+  position: absolute;
+  left: 0;
+  top: 344px;
+}
+
+.intro_title {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 112px;
+  color: white;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.intro_subtitle {
+  max-width: 478px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.search-form_info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form_submit {
+  padding: 25px 54px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  background: #d52027;
+  border: 0;
+  border-radius: 5px;
+}
+
+.search-form_submit:hover,
+.search-form_submit:focus,
+.search-form_submit:active {
+  background: #8d0f14;
+}
+
+.intro_zero {
+  width: 515.525px;
+  height: 917.485px;
+  margin-right: 200px;
+  padding-top: 162.52px;
+  padding-left: 347.48px;
+}
+
+.img_o {
+  position: absolute;
+  right: -130px;
+  bottom: 30px;
+}
+
+.img_girl {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Intro styles end */
+
+/* Numbers styles start */
+
+.numbers {
+  background: #fff;
+}
+
+.numbers_wrapper {
+  margin-left: 380px;
+  padding-top: 120px;
+  color: #141024;
+}
+
+.numbers_text {
+  margin-bottom: 60px;
+  width: 891px;
+  font-size: 30px;
+  font-family: Jost;
+  font-weight: 400;
+  line-height: 48px;
+  word-wrap: break-word;
+}
+
+.statistics {
+  display: flex;
+  gap: 40px;
+}
+
+.statistics h2 {
+  font-family: Jost;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 112px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #d52027;
+}
+
+.statistics p {
+  opacity: 0.7;
+  font-family: Jost;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 120px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Numbers styles end */
+
+/* Info styles start */
+
+.info {
+  background-color: #f9f9f9;
+}
+
+.info_wrapper {
+  color: #141024;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 380px;
+}
+
+.question {
+  margin-bottom: 60px;
+  font-family: Jost;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text_blocks {
+  display: flex;
+  gap: 40px;
+}
+
+.text_blocks h2 {
+  font-size: 24px;
+  font-family: Jost;
+  font-weight: 600;
+  line-height: 38.4px;
+  word-wrap: break-word;
+  position: relative;
+  display: inline-block;
+}
+
+.text_blocks p {
+  font-size: 18px;
+  font-family: Jost;
+  font-weight: 400;
+  line-height: 28.8px;
+  word-wrap: break-word;
+}
+
+.round {
+  position: absolute;
+  right: -30px;
+  top: -5px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e6e8;
+  color: #141024;
+}
+
+.window {
+  position: absolute;
+  right: -290px;
+  top: -65px;
+  width: 251px;
+  height: 56px;
+  display: inline-flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+}
+
+/* Info styles end */
+
+/* Coaches styles start */
+
+.coaches {
+  background: #fff;
+  color: #141024;
+}
+
+.coaches_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-left: 380px;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.professional {
+  margin-bottom: 60px;
+  font-family: Jost;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.detail {
+  display: flex;
+  gap: 40px;
+}
+
+.img_irina {
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.img_marina {
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.img_maksim {
+  position: relative;
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.img_kostia {
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.img_liza {
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.detail h2 {
+  color: #141024;
+  font-family: Jost;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.detail h3 {
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-top: 10px;
+}
+
+.detail p {
+  color: #d52027;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-top: 20px;
+}
+
+.prev_circle {
+  position: absolute;
+  right: 50px;
+  top: 148px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 3.333px;
+  justify-content: center;
+  align-items: center;
+}
+
+.next_circle {
+  position: absolute;
+  right: 0;
+  top: 148px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 3.333px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Coaches styles end */
+
+/* Product_cards styles start */
+
+.product_cards {
+  background: #fff;
+  color: #141024;
+  padding: 120px 0;
+}
+
+.product_cards_wrapper {
+  margin-left: 380px;
+}
+
+.package {
+  margin-bottom: 60px;
+  font-family: Jost;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card_package {
+  display: flex;
+  gap: 40px;
+}
+
+.pro_card {
+  width: 360px;
+  height: 500px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #141024;
+  color: #ffffff;
+}
+
+.pro_card h2 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding: 40px 117px;
+}
+
+.pro_card h3 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding-bottom: 20px;
+}
+
+.pro_card p {
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-bottom: 77px;
+}
+
+.robo_card {
+  width: 360px;
+  height: 460px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 16, 36, 0.2);
+  margin-top: 20px;
+}
+
+.robo_card h2 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding: 40px 104px 43px 105px;
+}
+
+.robo_card h3 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding-bottom: 20px;
+}
+
+.robo_card p {
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-bottom: 61px;
+}
+
+.prog_card {
+  width: 360px;
+  height: 460px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 16, 36, 0.2);
+  margin-top: 20px;
+}
+
+.prog_card h2 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding: 40px 104px 43px 105px;
+}
+
+.prog_card h3 {
+  text-align: center;
+  font-family: Jost;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding-bottom: 20px;
+}
+
+.prog_card p {
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-bottom: 61px;
+}
+
+.state {
+  width: 280px;
+  padding: 25px 54px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 160%;
+  color: white;
+  background: #d52027;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 40px 40px 40px;
+}
+
+.state:hover,
+.state:focus,
+.state:active {
+  background: #8d0f14;
+}
+
+/* Product_cards styles end */
+
+/* Contacts styles start */
+
+.form {
+  background-color: #d52027;
+  height: 460px;
+}
+
+.form_discount {
+  display: flex;
+  gap: 64px;
+}
+
+.discount {
+  margin-left: 380px;
+  width: 476px;
+}
+
+.form_wrapper {
+  width: 500px;
+}
+
+.text_discount {
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  padding-top: 106px;
+  padding-left: 60px;
+}
+
+.text_valid {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+.form_name {
+  padding-top: 87px;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.form_tel {
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.form_email {
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.form_input {
+  width: 500px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #f6f6f6;
+  border: #f6f6f6;
+  padding: 20px;
+}
+
+.form_btn {
+  font-family: Jost;
+  width: 500px;
+  height: 64px;
+  padding: 19px 182px 19px 183px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+  line-height: normal;
+  color: white;
+  background: #141024;
+  border: 0;
+  border-radius: 5px;
+}
+
+.form_btn:hover,
+.form_btn:focus,
+.form_btn:active {
+  background: #251e44;
+}
+
+.percent_sign {
+  display: flex;
+}
+
+/* Contacts styles end */
+
+/* Footer styles start */
+
+.footer {
+  background: #141024;
+  width: 1920px;
+  height: 159px;
+  flex-shrink: 0;
+}
+
+.footer_wrapper {
+  padding-left: 100px;
+  display: flex;
+  gap: 987px;
+}
+
+.footer_title {
+  padding-top: 40px;
+}
+
+.footer_title h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 48px;
+  word-wrap: break-word;
+  color: white;
+  width: 478px;
+  height: 48px;
+}
+
+.footer_title p {
+  text-align: center;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #ffffffb2;
+  width: 129px;
+  height: 26px;
+  padding-top: 5px;
+}
+
+.footer_phone {
+  color: #fff;
+  text-align: right;
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding-top: 40px;
+  padding-right: 100px;
+}
+
+/* Footer styles end */
+
+
+/* Media */
+
+
+@media (max-width: 800px) {
+
+
+}
